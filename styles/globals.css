@@ -34,7 +34,7 @@ a {
 
 h1 {
     font-size: 48px;
-    font-weight: 400;
+    font-weight: normal;
     margin-bottom: 20px;
     color: #fff;
     margin: 10px 0px;
@@ -42,7 +42,7 @@ h1 {
 
 h2 {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: bold;
     color: #fff;
     margin: 10px 0px;
 }
@@ -51,4 +51,9 @@ p {
     font-size: 18px;
     font-weight: 300;
     color: #fff;
+}
+
+section>.row {
+    max-width: 1440px;
+    margin: auto;
 }
