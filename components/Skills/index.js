@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 import SkillCard from "components/SkillCard";
 import IconCard from "components/IconCard";
 
-import styles from "./style.module.css";
+import styles from "./styles.module.css";
 
 export default function Skills() {
   const options = {
@@ -119,7 +119,7 @@ export default function Skills() {
       },
       {
         name: "C#",
-        icon: <img src="./png/c#.png" alt="C#" />,
+        icon: <img src="./png/c-share.png" alt="C#" />,
       },
       {
         name: "C++",
@@ -136,7 +136,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section className={styles.skills} id="skills">
+    <section className={styles.container} id="skills">
       <Row lg={2} md={2} xs={1}>
         <Col lg={12} md={12} xs={12}>
           <h1 className={styles.title}>Skills</h1>
