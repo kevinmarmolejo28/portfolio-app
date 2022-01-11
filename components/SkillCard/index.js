@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./style.module.css";
+import styles from "./styles.module.css";
 
 export default function SkillCard({
   title = "title",
@@ -24,7 +24,7 @@ export default function SkillCard({
   }, []);
 
   return (
-    <div className={selected ? styles.selected : styles.card}>
+    <div className={selected ? styles.selected : styles.container}>
       <div className={styles.header}>
         <p>{title}</p>
         {icon}

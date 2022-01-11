@@ -1,6 +1,6 @@
 @value colors: "styles/colors.css";
 @value (orange-color, background-color, gray-color) from colors;
-.card,
+.container,
 .selected {
     background-color: background-color;
     padding: 30px;
@@ -11,7 +11,7 @@
     border: 1px solid background-color;
 }
 
-.card:hover {
+.container:hover {
     border: 1px solid orange-color;
 }
 
