@@ -1,15 +1,19 @@
 @value colors: "styles/colors.css";
 @value (white-color, orange-color, background-color) from colors;
 .nav {
-    max-width: 1280px;
-    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: background-color;
+    z-index: 9999;
+}
+
+.container {
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 4rem;
-    position: sticky;
-    top: 0;
-    background-color: background-color;
+    margin: auto;
 }
 
 .menu {
@@ -23,7 +27,7 @@
     width: 110px;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 14px;
 }
 
