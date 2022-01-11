@@ -2,5 +2,5 @@
 @value (background-color, white-color, black-color) from colors;
 .main {
     background-color: background-color;
-    padding-top: 3.5rem;
+    padding-top: 1rem;
 }
