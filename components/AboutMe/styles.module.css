@@ -1,0 +1,18 @@
+@value colors: "styles/colors.css";
+@value (background-color, white-color, black-color) from colors;
+.about_me {
+    padding: 0rem 4rem;
+}
+
+.image_container {
+    text-align: center;
+}
+
+.image {
+    margin-top: 100px;
+}
+
+.tags {
+    display: flex;
+    margin: 150px 0px 40px 0px;
+}
