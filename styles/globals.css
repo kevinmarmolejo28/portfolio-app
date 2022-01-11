@@ -1,16 +1,38 @@
+@value colors: "../../styles/colors.css";
+@value (white-color, orange-color) from colors;
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #fff;
+    margin: 10px 0px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    margin: 10px 0px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
 }

@@ -1,0 +1,16 @@
+@value colors: "styles/colors.css";
+@value (orange-color, black-color) from colors;
+.tag {
+    background-color: orange-color;
+    border-radius: 5px;
+    padding: 2px 10px;
+    width: fit-content;
+    margin-right: 5px;
+}
+
+.tag>p {
+    color: black-color;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+}

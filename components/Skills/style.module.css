@@ -1,0 +1,25 @@
+@value colors: "styles/colors.css";
+@value (background-color, white-color, black-color) from colors;
+.skills {
+    background-color: black-color;
+    padding: 0rem 4rem;
+}
+
+.title {
+    text-align: center;
+    margin: 80px 0px;
+}
+
+.card_container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.card_icon_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card_icon_container> :global(.card) {
+    margin-left: 5px;
+}

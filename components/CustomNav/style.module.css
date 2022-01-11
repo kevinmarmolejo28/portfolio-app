@@ -1,0 +1,38 @@
+@value colors: "styles/colors.css";
+@value (white-color, orange-color, background-color) from colors;
+.nav {
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 4rem;
+    position: sticky;
+    top: 0;
+    background-color: background-color;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    color: white-color;
+    width: 110px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.item:hover,
+.item:global(.active) {
+    color: orange-color;
+}
+
+.network {
+    width: 30px;
+    cursor: pointer;
+}
