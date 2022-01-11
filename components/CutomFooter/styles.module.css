@@ -3,15 +3,18 @@
 .footer_container {
     width: 100%;
     background-color: orange-color;
-    padding: 25px 4rem;
+}
+
+.footer_container> :global(.row) {
+    max-width: 1440px;
+    margin: auto;
 }
 
 .footer_content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1440px;
-    margin: auto;
+    padding: 25px 0px;
 }
 
 .network {
