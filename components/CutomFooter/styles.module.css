@@ -1,0 +1,20 @@
+@value colors: "styles/colors.css";
+@value orange-color from colors;
+.footer_container {
+    width: 100%;
+    background-color: orange-color;
+    padding: 25px 0px;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.network {
+    width: 30px;
+    cursor: pointer;
+}
