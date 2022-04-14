@@ -1,6 +1,0 @@
-@value colors: "styles/colors.css";
-@value (background-color, white-color, black-color) from colors;
-.main {
-    background-color: background-color;
-    padding-top: 1rem;
-}

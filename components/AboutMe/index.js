@@ -1,36 +1,40 @@
+/* Next */
+import Image from "next/image";
+
+/* Own Components */
 import Tag from "components/Tag";
-import { Row, Col, Image } from "react-bootstrap";
-import styles from "./styles.module.css";
 
 export default function AboutMe() {
   return (
-    <section className={styles.about_me} id="about_me">
-      <Row lg={2} md={2} xs={1}>
-        <Col>
-          <div className={styles.tags}>
-            <Tag text="Multimedia Engineer" />
-            <Tag text="Full Stack Developer" />
-          </div>
-          <h1>Title</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </Col>
-        <Col className={styles.image_container}>
-          <Image
-            className={styles.image}
-            fluid
-            src="/png/photo.png"
-            alt="Kevin Marmolejo"
-          />
-        </Col>
-      </Row>
-    </section>
+    <div className="w-site pt-16 grid grid-cols-1 sm:grid-cols-2 gap-16">
+      <div className="flex flex-col justify-center space-y-10">
+        <div className="flex items-center space-x-3">
+          <Tag text="Multimedia Engineer" />
+          <Tag text="Full Stack Developer" />
+        </div>
+        <h1 className="font-bold">Kevin Marmolejo Solis</h1>
+        <p className="font-light text-lg">
+          I am a <strong>Multimedia Engineer</strong> from the Autónoma de
+          Occidente University. I have knowledge in software development,
+          digital content creation and UX and UI design. I characterize myself
+          as a tenacious and responsible person, always willing to improve and
+          learn. <br />
+          <br />
+          Actually I have 2 years developing websites, using technologies as
+          NextJS, furthermore I have experience in development of VR, AR, RM and
+          mobile Apps.
+        </p>
+      </div>
+
+      <Image
+        src="/png/photo.png"
+        width={644}
+        height={799}
+        className="rounded-lg"
+        layout="responsive"
+        objectFit="contain"
+        alt="Kevin Marmolejo"
+      />
+    </div>
   );
 }

@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./styles.module.css";
+/* React */
+import { useState, useEffect } from "react";
 
 export default function SkillCard({
   title = "title",
@@ -8,9 +8,11 @@ export default function SkillCard({
   icon = null,
   selected = false,
 }) {
-  const [fillScore, setFillScore] = React.useState([]);
+  // Component states
+  const [fillScore, setFillScore] = useState([]);
 
-  React.useEffect(() => {
+  // Load data
+  useEffect(() => {
     const scores = [];
     for (let i = 0; i < 5; i += 1) {
       if (i < score) {
@@ -24,15 +26,27 @@ export default function SkillCard({
   }, []);
 
   return (
-    <div className={selected ? styles.selected : styles.container}>
-      <div className={styles.header}>
-        <p>{title}</p>
-        {icon}
+    <div
+      className={`bg-gray p-8
+      shadow-lg rounded-md cursor-pointer
+      border-2 border-gray hover:border-primary
+      transition
+    ${selected ? "border-primary" : ""}`}
+    >
+      <div className="flex justify-between items-center">
+        <p className="text-primary capitalize mb-3 font-medium text-lg">
+          {title}
+        </p>
+        <div className="w-7 h-fit text-primary">{icon}</div>
       </div>
-      <p className={styles.description}>{description}</p>
-      <div className={styles.score}>
+      <p className="mb-9 capitalize font-light text-lg">{description}</p>
+      <div className="flex w-24 justify-between items-center">
         {fillScore.map((item) => (
-          <div className={item.fill ? styles.fill : styles.empty} key={item.id}>
+          <div
+            key={item.id}
+            className={`w-4 h-4 rounded-full 
+            ${item.fill ? "bg-primary" : "bg-white-dark"}`}
+          >
             {null}
           </div>
         ))}

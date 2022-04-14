@@ -9,7 +9,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 13,
+    ecmaVersion: "latest",
     sourceType: "module",
   },
   plugins: ["react"],
@@ -19,5 +19,8 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": "off",
     "import/no-unresolved": "off",
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
   },
 };

@@ -1,29 +1,30 @@
+/* Own Components */
 import ContactCard from "components/ContactCard";
-import { Col, Row } from "react-bootstrap";
-import styles from "./styles.module.css";
+import EmailOutlined from "components/Icons/EmailOutlined";
+import LinkedinOutlined from "components/Icons/LinkedinOutlined";
 
 export default function Contact() {
   return (
-    <section className={styles.container} id="contact">
-      <Row lg={2} md={2} sm={1}>
-        <Col lg={12} md={12} sm={12}>
-          <h1 className={styles.title}>Contact</h1>
-        </Col>
-        <Col>
-          <ContactCard
-            title="Gmail"
-            description="kevin.marmolejo.dev@gmail.com"
-            icon={<img src="./png/email-outlined.png" alt="Gmail" />}
-          />
-        </Col>
-        <Col>
-          <ContactCard
-            title="LinkedIn"
-            description="kevin-marmolejo-solis"
-            icon={<img src="./png/linkedin-outlined.png" alt="LinkedIn" />}
-          />
-        </Col>
-      </Row>
-    </section>
+    <div className="w-site py-16">
+      <h1 className="text-center mb-12 font-bold">Contact</h1>
+
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <ContactCard
+          title="Gmail"
+          description="kevin.marmolejo.dev@gmail.com"
+          alt="Gmail"
+          icon={<EmailOutlined />}
+          redirect="mailto:kevin.marmolejo.dev@gmail.com"
+        />
+
+        <ContactCard
+          title="LinkedIn"
+          description="kevin-marmolejo-solis"
+          alt="LinkedIn"
+          icon={<LinkedinOutlined />}
+          redirect="https://www.linkedin.com/in/kevin-marmolejo-solis"
+        />
+      </div>
+    </div>
   );
 }

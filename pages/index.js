@@ -1,13 +1,12 @@
 import Head from "next/head";
-import Nav from "components/CustomNav";
-import styles from "styles/Home.module.css";
-import Skills from "components/Skills";
 import React from "react";
+import Nav from "components/Nav";
+import Skills from "components/Skills";
 import { firestore } from "controller/client";
 import Projects from "components/Projects";
 import AboutMe from "components/AboutMe";
 import Contact from "components/Contact";
-import CustomFooter from "components/CutomFooter";
+import Footer from "components/Footer";
 
 export default function Home() {
   React.useEffect(() => {
@@ -27,23 +26,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Nav />
+      {/* Navbar */}
+      <Nav />
 
-        {/* About me */}
+      {/* About me */}
+      <section id="about-me">
         <AboutMe />
+      </section>
 
-        {/* Skills */}
+      {/* Skills */}
+      <section className="bg-gray-dark" id="skills">
         <Skills />
+      </section>
 
-        {/* Projects */}
+      {/* Projects */}
+      <section id="projects">
         <Projects />
+      </section>
 
-        {/* Contact */}
+      {/* Contact */}
+      <section className="bg-gray-dark" id="contact">
         <Contact />
+      </section>
 
-        <CustomFooter />
-      </main>
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

@@ -1,129 +1,186 @@
-import React from "react";
+/* React */
+import { useState, useEffect } from "react";
 
-import { Row, Col } from "react-bootstrap";
+/* Own Components */
 import SkillCard from "components/SkillCard";
 import IconCard from "components/IconCard";
-
-import styles from "./styles.module.css";
+import DigitalContent from "components/Icons/DigitalContent";
+import Code from "components/Icons/Code";
 
 export default function Skills() {
+  // Constants
   const options = {
     PROGRAM: "PROGRAMING",
     CONTENT_CREATION: "CONTENT CREATION",
   };
 
-  const [cards, setCards] = React.useState([]);
-  const [cardsFront, setCardsFront] = React.useState([]);
-  const [cardsBack, setCardsBack] = React.useState([]);
-  const [cardsEngines, setCardsEngines] = React.useState([]);
-  const [cardsDB, setCardsDB] = React.useState([]);
-  const [cardsOther, setCardsOther] = React.useState([]);
-  const [cardSelected, SetCardSelected] = React.useState(options.PROGRAM);
+  // Component states
+  const [cards, setCards] = useState([]);
+  const [cardsFront, setCardsFront] = useState([]);
+  const [cardsBack, setCardsBack] = useState([]);
+  const [cardsEngines, setCardsEngines] = useState([]);
+  const [cardsDB, setCardsDB] = useState([]);
+  const [cardsOther, setCardsOther] = useState([]);
+  const [cardsEdition, setCardsEdition] = useState([]);
+  const [cardSelected, SetCardSelected] = useState(options.PROGRAM);
 
-  React.useEffect(() => {
+  // Load data states
+  useEffect(() => {
     const cardsInfo = [
       {
         id: options.PROGRAM,
         title: "Programing",
-        score: 5,
-        icon: <img src="./png/code.png" alt="Coding" />,
+        score: 4,
+        icon: <Code />,
       },
       {
         id: options.CONTENT_CREATION,
         title: "Content Creation",
-        score: 4,
-        icon: <img src="./png/digital-content.png" alt="Digital content" />,
+        score: 3,
+        icon: <DigitalContent />,
       },
     ];
 
     const cardsFrontInfo = [
       {
         name: "Html 5",
-        icon: <img src="./png/html.png" alt="Html 5" />,
+        src: "/png/html.png",
+        alt: "Html 5",
       },
       {
         name: "Css",
-        icon: <img src="./png/css.png" alt="Css" />,
+        src: "/png/css.png",
+        alt: "Css",
       },
       {
         name: "Materialize",
-        icon: <img src="./png/materialize.png" alt="Materialize" />,
+        src: "/png/materialize.png",
+        alt: "Materialize",
       },
       {
         name: "Bootstrap",
-        icon: <img src="./png/bootstrap.png" alt="Bootstrap" />,
+        src: "/png/bootstrap.png",
+        alt: "Bootstrap",
       },
       {
         name: "React",
-        icon: <img src="./png/react.png" alt="React" />,
+        src: "/png/react.png",
+        alt: "React",
       },
       {
         name: "NextJS",
-        icon: <img src="./png/next.png" alt="NextJS" />,
+        src: "/png/next.png",
+        alt: "NextJS",
       },
       {
         name: "Flutter",
-        icon: <img src="./png/flutter.png" alt="Flutter" />,
+        src: "/png/flutter.png",
+        alt: "Flutter",
       },
       {
-        name: "Android Studio",
-        icon: <img src="./png/android-studio.png" alt="Android Studio" />,
+        name: "And. Studio",
+        src: "/png/android-studio.png",
+        alt: "Android Studio",
       },
     ];
 
     const cardsBackInfo = [
       {
         name: "NodeJS",
-        icon: <img src="./png/node.png" alt="NodeJS" />,
+        src: "/png/node.png",
+        alt: "NodeJS",
       },
       {
         name: "NextJS",
-        icon: <img src="./png/next.png" alt="NextJs" />,
+        src: "/png/next.png",
+        alt: "NextJs",
       },
       {
         name: "Python",
-        icon: <img src="./png/python.png" alt="Python" />,
+        src: "/png/python.png",
+        alt: "Python",
       },
     ];
 
     const cardsEnginesInfo = [
       {
         name: "Unity",
-        icon: <img src="./png/unity.png" alt="Unity" />,
+        src: "/png/unity.png",
+        alt: "Unity",
       },
       {
         name: "Unreal",
-        icon: <img src="./png/unreal.png" alt="Unreal" />,
+        src: "/png/unreal.png",
+        alt: "Unreal",
       },
     ];
 
     const cardsDBInfo = [
       {
         name: "MySQL",
-        icon: <img src="./png/mysql.png" alt="MySQL" />,
+        src: "/png/mysql.png",
+        alt: "MySQL",
       },
       {
         name: "MongoDB",
-        icon: <img src="./png/mongodb.png" alt="MongoDB" />,
+        src: "/png/mongodb.png",
+        alt: "MongoDB",
       },
       {
         name: "Firebase",
-        icon: <img src="./png/firebase.png" alt="Firebase" />,
+        src: "/png/firebase.png",
+        alt: "Firebase",
       },
     ];
 
     const cardsOthersInfo = [
       {
         name: "Github",
-        icon: <img src="./png/github.png" alt="GitHub" />,
+        src: "/png/github.png",
+        alt: "GitHub",
       },
       {
         name: "C#",
-        icon: <img src="./png/c-share.png" alt="C#" />,
+        src: "/png/c-share.png",
+        alt: "C#",
       },
       {
         name: "C++",
-        icon: <img src="./png/c++.png" alt="C++" />,
+        src: "/png/c++.png",
+        alt: "C++",
+      },
+    ];
+
+    const cardsEditionInfo = [
+      {
+        name: "After Effect",
+        src: "/png/after-effect.png",
+        alt: "After Effect",
+      },
+      {
+        name: "Audition",
+        src: "/png/audition.png",
+        alt: "Audition",
+      },
+      {
+        name: "Illustrator",
+        src: "/png/illustrator.png",
+        alt: "Illustrator",
+      },
+      {
+        name: "Photohop",
+        src: "/png/photoshop.png",
+        alt: "Photohop",
+      },
+      {
+        name: "Premier",
+        src: "/png/premier.png",
+        alt: "Premier",
+      },
+      {
+        name: "Maya",
+        src: "/png/maya.png",
+        alt: "Maya",
       },
     ];
 
@@ -133,15 +190,17 @@ export default function Skills() {
     setCardsEngines(cardsEnginesInfo);
     setCardsDB(cardsDBInfo);
     setCardsOther(cardsOthersInfo);
+    setCardsEdition(cardsEditionInfo);
   }, []);
 
   return (
-    <section className={styles.container} id="skills">
-      <Row lg={2} md={2} xs={1}>
-        <Col lg={12} md={12} xs={12}>
-          <h1 className={styles.title}>Skills</h1>
-        </Col>
-        <Col>
+    <div className="w-site py-16">
+      {/* Title */}
+      <h1 className="text-center mb-12 font-bold">Skills</h1>
+
+      <div className="grid grid-cols-1 gap-16 sm:grid-cols-2">
+        {/* Cards selection */}
+        <div className="max-w-lg space-y-5">
           {cards.map((item) => (
             <div
               key={item.id}
@@ -149,78 +208,116 @@ export default function Skills() {
               onKeyDown={() => SetCardSelected(item.id)}
               role="menuitem"
               tabIndex="0"
-              className={styles.card_container}
             >
               <SkillCard
                 title={item.title}
                 score={item.score}
-                icon={item.icon}
+                src={item.src}
+                alt={item.atl}
                 selected={cardSelected === item.id}
               />
             </div>
           ))}
-        </Col>
-        <Col className={cardSelected !== options.PROGRAM && "d-none"}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+        </div>
 
-          <h2>Frontend</h2>
-          <div className={styles.card_icon_container}>
-            {cardsFront.map((item) => (
-              <IconCard key={item.name} text={item.name} icon={item.icon} />
-            ))}
+        {/* Info selection coding */}
+        {cardSelected === options.PROGRAM && (
+          <div className="space-y-4">
+            <p className="text-lg font-light">
+              I am a full stack developer with a wide range of technologies for
+              mobile, web and video games.
+              <br />
+              <br />
+              Actually i am focus on website sector using React, NextJs and
+              Firebase, however there are many more technologies that I have had
+              the opportunity to learn.
+            </p>
+
+            <h2>Frontend</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+              {cardsFront.map((item) => (
+                <IconCard
+                  key={item.name}
+                  text={item.name}
+                  src={item.src}
+                  alt={item.atl}
+                />
+              ))}
+            </div>
+
+            <h2>Backend</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+              {cardsBack.map((item) => (
+                <IconCard
+                  key={item.name}
+                  text={item.name}
+                  src={item.src}
+                  alt={item.atl}
+                />
+              ))}
+            </div>
+
+            <h2>Game Engines</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+              {cardsEngines.map((item) => (
+                <IconCard
+                  key={item.name}
+                  text={item.name}
+                  src={item.src}
+                  alt={item.atl}
+                />
+              ))}
+            </div>
+
+            <h2>Databases</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+              {cardsDB.map((item) => (
+                <IconCard
+                  key={item.name}
+                  text={item.name}
+                  src={item.src}
+                  alt={item.atl}
+                />
+              ))}
+            </div>
+
+            <h2>Others</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+              {cardsOther.map((item) => (
+                <IconCard
+                  key={item.name}
+                  text={item.name}
+                  src={item.src}
+                  alt={item.atl}
+                />
+              ))}
+            </div>
           </div>
+        )}
 
-          <h2>Backend</h2>
-          <div className={styles.card_icon_container}>
-            {cardsBack.map((item) => (
-              <IconCard key={item.name} text={item.name} icon={item.icon} />
-            ))}
+        {/* Info selection media */}
+        {cardSelected === options.CONTENT_CREATION && (
+          <div className="space-y-4">
+            <p className="text-lg font-light">
+              Thanks to my career I had the opportunity to learn about the
+              digital content creation, from video edition, creation of graphic
+              pieces until modeling and animation 3D.
+            </p>
+
+            <h2>Softwares</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+              {cardsEdition.map((item) => (
+                <IconCard
+                  key={item.name}
+                  text={item.name}
+                  src={item.src}
+                  alt={item.atl}
+                />
+              ))}
+            </div>
           </div>
-
-          <h2>Game Engines</h2>
-          <div className={styles.card_icon_container}>
-            {cardsEngines.map((item) => (
-              <IconCard key={item.name} text={item.name} icon={item.icon} />
-            ))}
-          </div>
-
-          <h2>Databases</h2>
-          <div className={styles.card_icon_container}>
-            {cardsDB.map((item) => (
-              <IconCard key={item.name} text={item.name} icon={item.icon} />
-            ))}
-          </div>
-
-          <h2>Others</h2>
-          <div className={styles.card_icon_container}>
-            {cardsOther.map((item) => (
-              <IconCard key={item.name} text={item.name} icon={item.icon} />
-            ))}
-          </div>
-        </Col>
-
-        <Col className={cardSelected !== options.CONTENT_CREATION && "d-none"}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-
-          <h2>Softwares</h2>
-        </Col>
-      </Row>
-    </section>
+        )}
+      </div>
+    </div>
   );
 }
