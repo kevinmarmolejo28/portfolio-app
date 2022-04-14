@@ -29,7 +29,7 @@ export default function ProjectCard({
 
         {hrefVisit && (
           <div>
-            <a href={hrefVisit}>
+            <a href={hrefVisit} target="_blank" rel="noreferrer">
               <p className="text-primary underline underline-offset-2 cursor-pointer">
                 Visit
               </p>
