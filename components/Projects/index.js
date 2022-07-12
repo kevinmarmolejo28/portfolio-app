@@ -14,7 +14,8 @@ export default function Projects() {
         title: "Interactive Catalog",
         description:
           "Web application for the company Metalicas Mundial LTDA., catalog type, to view their products in 3D, both individual and installed, with the possibility of changing colors and viewing their specifications.",
-        video: "",
+        video:
+          "https://firebasestorage.googleapis.com/v0/b/kev-portfolio.appspot.com/o/Taltek.mp4?alt=media&token=994fcf72-1ec5-4328-ae30-1e57db71077b",
         techs: [
           {
             id: 1,
@@ -57,29 +58,6 @@ export default function Projects() {
         ],
       },
       {
-        id: 3,
-        title: "Meego",
-        description:
-          "Mobile application for the provision of beauty services, where people can create their store and acquire different services or products related to beauty for both men and women.",
-        video: "",
-        hrefVisit:
-          "https://play.google.com/store/apps/details?id=com.meego.app&hl=es_CO",
-        techs: [
-          {
-            id: 1,
-            name: "Html 5",
-          },
-          {
-            id: 2,
-            name: "Css",
-          },
-          {
-            id: 3,
-            name: "ThreeJs",
-          },
-        ],
-      },
-      {
         id: 4,
         title: "Hot Rod 3D Model",
         description:
@@ -98,6 +76,78 @@ export default function Projects() {
           {
             id: 3,
             name: "Adobe Premier",
+          },
+        ],
+      },
+      {
+        id: 5,
+        title: "MyFreeQr",
+        description:
+          "Web application where customers can create a QR code for their restaurant menus, it is also possible to pay for each QR code to remove ads.",
+        image: "/png/myfreeqr.png",
+        site: "https://myfreeqr.com",
+        techs: [
+          {
+            id: 1,
+            name: "Html 5",
+          },
+          {
+            id: 2,
+            name: "Css",
+          },
+          {
+            id: 3,
+            name: "Materialize",
+          },
+          {
+            id: 4,
+            name: "Javascript",
+          },
+          {
+            id: 5,
+            name: "React",
+          },
+          {
+            id: 6,
+            name: "Firebase",
+          },
+        ],
+      },
+      {
+        id: 5,
+        title: "The NFT Generator",
+        description:
+          "Web application where artists can upload their layers to crate up to 10,000 NFTs with their metadata.",
+        image: "/png/the-nft-generator.png",
+        site: "https://the-nft-generator.com",
+        techs: [
+          {
+            id: 1,
+            name: "Html 5",
+          },
+          {
+            id: 2,
+            name: "Css",
+          },
+          {
+            id: 3,
+            name: "Tailwind",
+          },
+          {
+            id: 4,
+            name: "Javascript",
+          },
+          {
+            id: 5,
+            name: "React",
+          },
+          {
+            id: 4,
+            name: "Next JS",
+          },
+          {
+            id: 5,
+            name: "Firebase",
           },
         ],
       },
@@ -121,6 +171,8 @@ export default function Projects() {
               description={project.description}
               technologies={project.techs}
               video={project.video}
+              image={project.image}
+              site={project.site}
               hrefVisit={project.hrefVisit}
             />
           </div>

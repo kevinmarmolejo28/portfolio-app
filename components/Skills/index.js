@@ -58,6 +58,11 @@ export default function Skills() {
         alt: "Materialize",
       },
       {
+        name: "Tailwind",
+        src: "/png/tailwind.png",
+        alt: "tailwind",
+      },
+      {
         name: "Bootstrap",
         src: "/png/bootstrap.png",
         alt: "Bootstrap",

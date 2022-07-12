@@ -1,3 +1,6 @@
+/* Next */
+import Image from "next/image";
+
 /* Own Components */
 import Tag from "components/Tag";
 
@@ -5,7 +8,9 @@ export default function ProjectCard({
   title = "Title",
   description = "Description",
   technologies = [{ id: 1, name: "Tech" }],
-  video = "",
+  video = null,
+  image = null,
+  site = null,
   hrefVisit = null,
 }) {
   return (
@@ -16,7 +21,19 @@ export default function ProjectCard({
     >
       <div className="flex flex-col justify-between">
         <div>
-          <p className="text-primary font-bold text-lg">{title}</p>
+          <div className="flex justify-between mb-3">
+            <p className="text-primary font-bold text-lg">{title}</p>
+            {site && (
+              <a
+                href={site}
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary underline underline-offset-1 hover:text-primary-dark"
+              >
+                Visit
+              </a>
+            )}
+          </div>
           <p className="font-light text-lg mb-12">{description}</p>
 
           <p className="text-primary font-bold text-lg">Used Technologies</p>
@@ -38,7 +55,18 @@ export default function ProjectCard({
         )}
       </div>
 
-      <video loop autoPlay muted src={video} />
+      {video && <video loop autoPlay muted src={video} controls />}
+
+      {image && (
+        <Image
+          src={image}
+          width={900}
+          height={500}
+          layout="responsive"
+          objectFit="contain"
+          alt={title}
+        />
+      )}
     </div>
   );
 }

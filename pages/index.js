@@ -1,23 +1,15 @@
+/* Next */
 import Head from "next/head";
-import React from "react";
+
+/* Own Components */
 import Nav from "components/Nav";
 import Skills from "components/Skills";
-import { firestore } from "controller/client";
 import Projects from "components/Projects";
 import AboutMe from "components/AboutMe";
 import Contact from "components/Contact";
 import Footer from "components/Footer";
 
 export default function Home() {
-  React.useEffect(() => {
-    firestore
-      .collection("test")
-      .doc("test")
-      .get()
-      .then((res) => {
-        console.log(res.data());
-      });
-  }, []);
   return (
     <>
       <Head>

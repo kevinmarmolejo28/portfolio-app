@@ -27,12 +27,12 @@ export default function AboutMe() {
       </div>
 
       <Image
-        src="/png/photo.png"
-        width={644}
-        height={799}
-        className="rounded-lg"
+        src="/png/kevin-marmolejo.jpg"
+        width={1000}
+        height={1200}
+        className="rounded-t-lg"
         layout="responsive"
-        objectFit="contain"
+        objectFit="cover"
         alt="Kevin Marmolejo"
       />
     </div>
