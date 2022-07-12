@@ -114,7 +114,7 @@ export default function Projects() {
         ],
       },
       {
-        id: 5,
+        id: 6,
         title: "The NFT Generator",
         description:
           "Web application where artists can upload their layers to crate up to 10,000 NFTs with their metadata.",
@@ -142,11 +142,11 @@ export default function Projects() {
             name: "React",
           },
           {
-            id: 4,
+            id: 6,
             name: "Next JS",
           },
           {
-            id: 5,
+            id: 7,
             name: "Firebase",
           },
         ],
@@ -173,7 +173,6 @@ export default function Projects() {
               video={project.video}
               image={project.image}
               site={project.site}
-              hrefVisit={project.hrefVisit}
             />
           </div>
         ))}

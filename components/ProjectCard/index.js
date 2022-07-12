@@ -11,7 +11,6 @@ export default function ProjectCard({
   video = null,
   image = null,
   site = null,
-  hrefVisit = null,
 }) {
   return (
     <div
@@ -23,30 +22,22 @@ export default function ProjectCard({
         <div>
           <div className="flex justify-between mb-3">
             <p className="text-primary font-bold text-lg">{title}</p>
-            {site && (
-              <a
-                href={site}
-                target="_blank"
-                rel="noreferrer"
-                className="text-primary underline underline-offset-1 hover:text-primary-dark"
-              >
-                Visit
-              </a>
-            )}
           </div>
           <p className="font-light text-lg mb-12">{description}</p>
 
           <p className="text-primary font-bold text-lg">Used Technologies</p>
-          <div className="flex space-x-2 mt-1">
+          <div className="flex mt-1 flex-wrap -ml-2">
             {technologies.map((item) => (
-              <Tag key={item.id} text={item.name} />
+              <div key={item.id} className="ml-2 mt-2">
+                <Tag text={item.name} />
+              </div>
             ))}
           </div>
         </div>
 
-        {hrefVisit && (
-          <div>
-            <a href={hrefVisit} target="_blank" rel="noreferrer">
+        {site && (
+          <div className="mt-5">
+            <a href={site} target="_blank" rel="noreferrer">
               <p className="text-primary underline underline-offset-2 cursor-pointer">
                 Visit
               </p>
