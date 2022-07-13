@@ -39,7 +39,7 @@ export default function SkillCard({
         </p>
         <div className="w-7 h-fit text-primary">{icon}</div>
       </div>
-      <p className="mb-9 capitalize font-light text-lg">{description}</p>
+      <p className="mb-9 capitalize font-light text-lg hidden">{description}</p>
       <div className="flex w-24 justify-between items-center">
         {fillScore.map((item) => (
           <div
