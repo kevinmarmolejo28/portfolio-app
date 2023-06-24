@@ -20,7 +20,7 @@ export default function AboutMe() {
           as a tenacious and responsible person, always willing to improve and
           learn. <br />
           <br />
-          Actually I have 2 years developing websites, using technologies as
+          Actually I have 4 years developing websites, using technologies as
           NextJS, furthermore I have experience in development of VR, AR, RM and
           mobile Apps.
         </p>
